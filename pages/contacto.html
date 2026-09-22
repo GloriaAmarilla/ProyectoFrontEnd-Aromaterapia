@@ -23,9 +23,43 @@
 
     <main>
       <h1>Contactanos</h1>
-      <p>Puedes contactarnos por los siguientes medios</p>
-      <h2>Email</h2>
-      <a href="mailto:bebooguzman@gmail.com">Correo Electronico de Contacto</a>
+
+      <form action="https://formspree.io/f/xaenojbe" method="POST">
+        <fieldset>
+          <legend>Dejanos tu consulta</legend>
+
+          <label for="fecha">
+            Fecha de consulta:
+            <input id="fecha" name="fecha" type="date" required />
+          </label>
+
+          <label for="email">
+            Tu e-mail:
+            <input
+              id="email"
+              type="email"
+              name="email"
+              placeholder="nombre@gmail.com"
+              required
+            />
+          </label>
+
+          <label for="mensaje">
+            Tu consulta:
+            <textarea
+              id="mensaje"
+              name="mensaje"
+              rows="4"
+              cols="50"
+              placeholder="Hola me comunico para..."
+              required
+              maxlength="1000"
+            ></textarea>
+          </label>
+          <!-- boton de enviar -->
+          <button type="submit">Enviar</button>
+        </fieldset>
+      </form>
     </main>
 
     <footer>
