@@ -12,7 +12,7 @@
       <nav>
         <ul>
           <li>
-            <a href="/index.html">Inicio</a>
+            <a href="../index.html">Inicio</a>
           </li>
           <li>
             <a href="./contacto.html">Contacto</a>
@@ -28,9 +28,26 @@
         <fieldset>
           <legend>Dejanos tu consulta</legend>
 
-          <label for="fecha">
-            Fecha de consulta:
-            <input id="fecha" name="fecha" type="date" required />
+          <label for="nombre">
+            Nombre:
+            <input
+              id="nombre"
+              name="nombre"
+              type="text"
+              maxlength="25"
+              required
+            />
+          </label>
+
+          <label for="apellido">
+            Apellido:
+            <input
+              id="apellido"
+              name="apellido"
+              type="text"
+              maxlength="25"
+              required
+            />
           </label>
 
           <label for="email">
@@ -42,6 +59,11 @@
               placeholder="nombre@gmail.com"
               required
             />
+          </label>
+
+          <label for="fecha">
+            Fecha de consulta:
+            <input id="fecha" name="fecha" type="date" required />
           </label>
 
           <label for="mensaje">
