@@ -1,19 +1,24 @@
 <!doctype html>
-<html lang="en">
+<html lang="es">
   <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Commissioner:wght@100..900&display=swap"
+      rel="stylesheet"
+    />
     <link rel="stylesheet" href="./css/styles.css" />
-    <title>Home</title>
+    <title>Inicio - Aromaterapia</title>
   </head>
   <body>
-    <header>
-      <h1 class="centrado">Aromaterapia</h1>
-      <p>
-        Aqui podras acceder a productos de aromaterapia de alta calidad y
-        precios económicos.
-      </p>
-      <nav>
+    <header class="bg-primario">
+      <div class="div-logo">
+        <a class="logo" href="./index.html">Aromaterapia</a>
+      </div>
+
+      <nav class="header-nav">
         <ul>
           <li>
             <a href="./index.html">Inicio</a>
@@ -26,132 +31,169 @@
     </header>
 
     <main>
-      <!-- productos -->
-      <h2>Productos</h2>
-      <section>
-        <h3>Sahumerios Mágicos</h3>
-        <h4>Marca: Aromanza</h4>
-        <img
-          src="./images/sahumerios.jpeg"
-          alt="Tres cajas de: Frutos rojos, Variedad aromática, Jazmin del País"
-          width="600"
-          height="400"
-        />
-        <p>Precio: $2.800</p>
-
-        <form action="./pages/result.html" method="get" target="blank">
-          <fieldset>
-            <label for="sahumerio-elegido">Elegir aroma:</label>
-            <select id="sahumerio-elegido" name="sahumerio-elegido">
-              <option value="">--Selecciona un aroma--</option>
-              <option value="frutos-rojos">Frutos rojos</option>
-              <option value="variedad">Variedad Aromática</option>
-              <option value="jazmin">Jazmín del País</option>
-            </select>
-
-            <label for="cantidad-sahumerio">Cantidad:</label>
-            <input
-              type="number"
-              id="cantidad-sahumerio"
-              name="cantidad-sahumerio"
-              value="1"
-              min="1"
-              max="5"
-              required
-            />
-
-            <button>Añadir al carrito</button>
-          </fieldset>
-        </form>
+      <section class="inicio">
+        <h1>Aromaterapia</h1>
+        <p class="parrafo">
+          Aqui podras acceder a productos de aromaterapia de alta calidad y
+          precios económicos.
+        </p>
       </section>
 
-      <section>
-        <h3>Esferas Mágicas</h3>
-        <h4>Marca: Aromanza</h4>
-        <img
-          src="./images/esferas.jpeg"
-          alt="Dos cajas de esferas para sahumar de Naranja pimienta y Defumación"
-          width="600"
-          height="400"
-        />
-        <p>Precio: $1.100</p>
-        <form action="./pages/result.html" method="get" target="blank">
-          <fieldset>
-            <label for="esfera-elegida">Elegir aroma:</label>
-            <select id="esfera-elegida" name="esfera-elegida">
-              <option value="">--Selecciona un aroma--</option>
-              <option value="naranja">Naranja Pimienta</option>
-              <option value="defumacion">Defumación</option>
-            </select>
-
-            <label for="cantidad-esfera">Cantidad:</label>
-            <input
-              type="number"
-              id="cantidad-esfera"
-              name="cantidad-esfera"
-              value="1"
-              min="1"
-              max="5"
-              required
+      <section class="area-productos">
+        <!-- --------------- aca van todas las tarjetas de productos --------------- -->
+        <h2>Productos</h2>
+        <div class="contenedor-tarjetas">
+          <article class="tarjeta">
+            <img
+              src="./images/sahumerios.jpeg"
+              alt="Tres cajas de: Frutos rojos, Variedad aromática, Jazmin del País"
+              width="300"
             />
+            <h3>Sahumerios Mágicos</h3>
+            <h4>Marca: Aromanza</h4>
 
-            <button>Añadir al carrito</button>
-          </fieldset>
-        </form>
-      </section>
+            <p>Precio: $2.800</p>
 
-      <section>
-        <h3>Aceites Aromáticos</h3>
-        <h4>Marca: Iluminarte</h4>
-        <img
-          src="./images/aceites.jpeg"
-          alt="Frascos de aceites esenciales de 13 aromas diferentes"
-          width="600"
-          height="400"
-        />
-        <p>Precio: $2.000</p>
+            <form
+              class="form-productos"
+              action="./pages/result.html"
+              method="get"
+              target="blank"
+            >
+              <fieldset>
+                <label for="sahumerio-elegido">Elegir aroma:</label>
+                <select id="sahumerio-elegido" name="sahumerio-elegido">
+                  <option value="">--Selecciona un aroma--</option>
+                  <option value="frutos-rojos">Frutos rojos</option>
+                  <option value="variedad">Variedad Aromática</option>
+                  <option value="jazmin">Jazmín del País</option>
+                </select>
 
-        <form action="./pages/result.html" method="get" target="blank">
-          <fieldset>
-            <label for="aceite-aromatico">Elegir aroma:</label>
-            <select id="aceite-aromatico" name="aceite-aromatico">
-              <option value="">--Selecciona un aroma--</option>
-              <option value="sandalo">Sándalo</option>
-              <option value="mirra">Mirra Consagrada</option>
-              <option value="champa">Real Champa</option>
-              <option value="patchouli">Patchouli</option>
-              <option value="naranja">Naranja Pimienta</option>
-              <option value="frutilla">Frutillas Dulces</option>
-              <option value="incienso">Incienso Consagrado</option>
-              <option value="lavanda">Lavanda Francesa</option>
-              <option value="fresias">Fresias</option>
-              <option value="canela">Canela Mistica</option>
-              <option value="uva">Uva Dulce</option>
-              <option value="7chakras">7 Chakras</option>
-              <option value="coco">Coco</option>
-            </select>
+                <label for="cantidad-sahumerio">Cantidad:</label>
+                <input
+                  type="number"
+                  id="cantidad-sahumerio"
+                  name="cantidad-sahumerio"
+                  value="1"
+                  min="1"
+                  max="5"
+                  required
+                />
 
-            <label for="cantidad-aceite">Cantidad:</label>
-            <input
-              type="number"
-              id="cantidad-aceite"
-              name="cantidad-aceite"
-              value="1"
-              min="1"
-              max="5"
-              required
+                <button class="btn">Añadir al carrito</button>
+              </fieldset>
+            </form>
+          </article>
+
+          <article class="tarjeta">
+            <img
+              src="./images/esferas.jpeg"
+              alt="Dos cajas de esferas para sahumar de Naranja pimienta y Defumación"
+              width="300"
             />
+            <h3>Esferas Mágicas</h3>
+            <h4>Marca: Aromanza</h4>
 
-            <button>Añadir al carrito</button>
-          </fieldset>
-        </form>
+            <p>Precio: $1.100</p>
+            <form
+              class="form-productos"
+              action="./pages/result.html"
+              method="get"
+              target="blank"
+            >
+              <fieldset>
+                <label for="esfera-elegida">Elegir aroma:</label>
+                <select id="esfera-elegida" name="esfera-elegida">
+                  <option value="">--Selecciona un aroma--</option>
+                  <option value="naranja">Naranja Pimienta</option>
+                  <option value="defumacion">Defumación</option>
+                </select>
+
+                <label for="cantidad-esfera">Cantidad:</label>
+                <input
+                  type="number"
+                  id="cantidad-esfera"
+                  name="cantidad-esfera"
+                  value="1"
+                  min="1"
+                  max="5"
+                  required
+                />
+
+                <button class="btn">Añadir al carrito</button>
+              </fieldset>
+            </form>
+          </article>
+
+          <article class="tarjeta">
+            <img
+              src="./images/aceites.jpeg"
+              alt="Frascos de aceites esenciales de 13 aromas diferentes"
+              width="300"
+            />
+            <h3>Aceites Aromáticos</h3>
+            <h4>Marca: Iluminarte</h4>
+            <p>Precio: $2.000</p>
+            <form
+              class="form-productos"
+              action="./pages/result.html"
+              method="get"
+              target="blank"
+            >
+              <fieldset>
+                <label for="aceite-aromatico">Elegir aroma:</label>
+                <select id="aceite-aromatico" name="aceite-aromatico">
+                  <option value="">--Selecciona un aroma--</option>
+                  <option value="sandalo">Sándalo</option>
+                  <option value="mirra">Mirra Consagrada</option>
+                  <option value="champa">Real Champa</option>
+                  <option value="patchouli">Patchouli</option>
+                  <option value="naranja">Naranja Pimienta</option>
+                  <option value="frutilla">Frutillas Dulces</option>
+                  <option value="incienso">Incienso Consagrado</option>
+                  <option value="lavanda">Lavanda Francesa</option>
+                  <option value="fresias">Fresias</option>
+                  <option value="canela">Canela Mistica</option>
+                  <option value="uva">Uva Dulce</option>
+                  <option value="7chakras">7 Chakras</option>
+                  <option value="coco">Coco</option>
+                </select>
+
+                <label for="cantidad-aceite">Cantidad:</label>
+                <input
+                  type="number"
+                  id="cantidad-aceite"
+                  name="cantidad-aceite"
+                  value="1"
+                  min="1"
+                  max="5"
+                  required
+                />
+
+                <button class="btn">Añadir al carrito</button>
+              </fieldset>
+            </form>
+          </article>
+        </div>
       </section>
     </main>
 
-    <footer>
+    <footer class="bg-secundario">
       <!-- pie de pagina -->
       <h1>Sitio informativo</h1>
       <p>Muestra de productos aromáticos.</p>
+
+      <nav class="footer-list">
+        <ul>
+          <li>
+            <img
+              src="./images/whatsapp.png"
+              alt="logo de whatsapp"
+              width="50"
+            />
+          </li>
+        </ul>
+      </nav>
     </footer>
   </body>
 </html>
