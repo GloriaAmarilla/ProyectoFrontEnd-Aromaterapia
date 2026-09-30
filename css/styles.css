@@ -20,7 +20,16 @@ body {
   display: flex;
   flex-direction: column;
   min-height: 100vh;
+  width: 100%;
 }
+
+/*header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  background-color: #317959;
+  width: 100%;
+}*/
 
 main {
   width: 80%;
@@ -78,14 +87,14 @@ footer {
 .logo,
 .header-nav a {
   text-decoration: none;
-  font-size: 3rem;
+  font-size: 2.5rem;
   color: inherit;
   display: inline-block;
-  padding: 2rem;
+  padding: 1.5rem;
 }
 
 .header-nav {
-  margin: 2rem;
+  margin: 1rem;
 }
 
 .header-nav ul,
@@ -93,7 +102,7 @@ footer .footer-list,
 li {
   list-style: none;
   display: flex;
-  gap: 2rem;
+  gap: 1rem;
 }
 
 .footer-list img {
