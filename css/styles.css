@@ -55,6 +55,7 @@ h2 {
   font-weight: bold;
   padding: 1.6rem;
   border-radius: 1rem;
+  background-color: #22ee99;
 }
 
 header,
@@ -88,7 +89,8 @@ footer {
 }
 
 .header-nav ul,
-footer .footer-list {
+footer .footer-list,
+li {
   list-style: none;
   display: flex;
   gap: 2rem;
@@ -165,14 +167,34 @@ footer .footer-list {
   object-fit: cover;
 }
 
-.form-productos {
+.fieldset-producto {
   display: flex;
   flex-direction: column;
   align-items: center;
-}
-
-.form-productos fieldset {
   padding: 1rem;
   border-radius: 2rem;
-  /* -------------------------------- continuar ------------------------------- */
+  justify-content: center;
+}
+
+.fieldset-producto input,
+select,
+button {
+  margin: 1rem;
+}
+
+/* -------------------------------------------------------------------------- */
+/*                                  Contacto                                  */
+/* -------------------------------------------------------------------------- */
+.fieldset-contacto {
+  display: flex;
+  flex-direction: column;
+  align-items: stretch;
+  padding: 3rem;
+  border-radius: 2rem;
+  justify-content: center;
+  margin: 0 4%;
+}
+
+.consulta {
+  width: 80%;
 }
