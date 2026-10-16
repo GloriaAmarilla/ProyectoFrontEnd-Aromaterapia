@@ -199,3 +199,18 @@ button {
 .consulta {
   width: 80%;
 }
+
+/* -------------------------------------------------------------------------- */
+/*                                Media Queries                               */
+/* -------------------------------------------------------------------------- */
+@media (max-width: 600px) {
+  header,
+  footer {
+    flex-direction: column;
+  }
+
+  .header-nav,
+  .div-logo {
+    margin: 0;
+  }
+}
