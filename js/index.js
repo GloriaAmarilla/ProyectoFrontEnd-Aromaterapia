@@ -1,8 +1,4 @@
-const productos = [
-  { nombre: "Sahumerios Magicos", marca: "Aromanza", precio: 2800 },
-  { nombre: "Esferas Mágicas", marca: "Aromanza", precio: 1100 },
-  { nombre: "Aceites Aromaticos", marca: "Iluminarte", precio: 2000 },
-];
+import { productos } from "./productosProvisorio.js";
 
 const contenedorTarjetas = document.getElementById("contenedor-tarjetas");
 
@@ -19,6 +15,11 @@ for (const producto of productos) {
   const marca = document.createElement("h4");
   marca.textContent = producto.marca;
 
+  //Creo la imagen
+  const imagen = document.createElement("img");
+  imagen.src = `./${producto.img}`;
+  imagen.alt = producto.nombre;
+
   //Creo su precio
   const precio = document.createElement("p");
   precio.textContent = `$${producto.precio}`;
@@ -34,6 +35,7 @@ for (const producto of productos) {
   //Agrego los elementos creados a la tarjetaProducto
   tarjetaProducto.appendChild(titulo);
   tarjetaProducto.appendChild(marca);
+  tarjetaProducto.appendChild(imagen);
   tarjetaProducto.appendChild(precio);
   tarjetaProducto.appendChild(boton);
 
