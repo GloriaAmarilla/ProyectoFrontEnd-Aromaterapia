@@ -1,6 +1,3 @@
-// //provisorio para el manejo de datos
-// import { productos } from "./productosProvisorio.js";
-
 import { agregarAlCarrito } from "./funcionesCarrito.js";
 import { obtenerCarrito } from "./storage.js";
 import { actualizarContador } from "./ui.js";
@@ -49,7 +46,8 @@ const renderizarProductos = () => {
         //Agrego la tarjeta al contenedor de tarjetas
         contenedorTarjetas.appendChild(tarjetaProducto);
       });
-    });
+    })
+    .catch((error) => console.log(error));
 };
 
 //controlamos que se cargue el DOM completo antes de que

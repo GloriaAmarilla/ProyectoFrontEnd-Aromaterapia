@@ -22,7 +22,7 @@ export const agregarAlCarrito = (producto) => {
 
 export const eliminarProducto = (indice) => {
   //usamos la funcion para pedir el carrito desde localStorage
-  const carrito = localStorage.obtenerCarrito();
+  const carrito = obtenerCarrito();
 
   //Eliminamos un producto con ese indice
   carrito.splice(indice, 1);
@@ -36,9 +36,13 @@ export const eliminarProducto = (indice) => {
 };
 
 export const vaciarCarrito = () => {
-  vaciarCarritoStorage();
+  const confirmacion = confirm("Estás seguro que quieres vaciar el carrito?");
+  if (confirmacion) {
+    vaciarCarritoStorage();
 
-  //actualizamos el contador para que esté vacío
-  actualizarContador([]);
-  mostrarMensaje("🔴Carrito vaciado🔴");
+    //actualizamos el contador para que esté vacío
+    actualizarContador([]);
+    mostrarMensaje("🔴Carrito vaciado🔴");
+    return;
+  }
 };

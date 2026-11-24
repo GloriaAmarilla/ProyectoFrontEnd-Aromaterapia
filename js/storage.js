@@ -1,4 +1,5 @@
 const key = "carrito";
+
 export const guardarCarrito = (carrito) => {
   //Convertimos a JSON para guardarlo en el localStorage
   localStorage.setItem(key, JSON.stringify(carrito));
