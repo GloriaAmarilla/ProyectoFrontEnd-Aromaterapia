@@ -8,7 +8,6 @@ const renderizarCarrito = () => {
 
   //Donde van a aparecer los productos
   const contenedor = document.getElementById("contenedor-carrito");
-  //contenedor.appendChild(carrito);
 
   //Botones de acciones eliminar producto, vaciar y finalizar
   const divAcciones = document.getElementById("acciones-carrito");
